@@ -1,0 +1,16 @@
+Flask==2.2.3
+Werkzeug==2.2.3
+beautifulsoup4==4.12.2   # For web scraping
+requests==2.31.0         # For making HTTP requests (if needed in scraping)
+numpy==1.24.4            # For numerical computations
+opencv-python==4.8.0.76  # For image processing
+Pillow==9.5.0            # For image handling and manipulation
+scikit-image==0.20.0     # For advanced image processing
+scipy==1.11.2            # For additional scientific computations
+matplotlib==3.8.0        # For visualizing 3D models (optional)
+mediapipe==0.10.0        # For creating 3D models and analyzing body posture
+scikit-learn==1.3.1      # For recommendation engine and ML-based analysis
+
+# Optional but useful for 3D modeling and rendering
+pythreejs==2.4.3         # For 3D visualization in the browser
+pyglet==2.0.7            # For handling 3D assets
