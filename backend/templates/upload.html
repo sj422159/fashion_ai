@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Dress Fitter - Upload</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Virtual Dress Fitter</h1>
+            <p>Upload your image and dress link to get started!</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="form-section">
+                <h2>Upload Details</h2>
+                <form id="uploadForm" action="/process" method="POST" enctype="multipart/form-data">
+                    <!-- Dress URL Input -->
+                    <div class="form-group">
+                        <label for="dressUrl">Enter Dress URL:</label>
+                        <input type="url" id="dressUrl" name="dress_url" placeholder="https://example.com/dress" required>
+                    </div>
+
+                    <!-- User Image Upload -->
+                    <div class="form-group">
+                        <label for="userImage">Upload Your Image:</label>
+                        <input type="file" id="userImage" name="user_image" accept="image/jpeg, image/png" required>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Virtual Dress Fitter. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

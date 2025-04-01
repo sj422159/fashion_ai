@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Dress Fitter - Results</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Virtual Dress Fitter</h1>
+            <p>Your results are ready!</p>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <section class="results-section">
+                <h2>Fitting Result</h2>
+                <div id="result">
+                    {% if fitted_image %}
+                    <p>Here’s how the dress looks on you:</p>
+                    <img src="{{ fitted_image }}" alt="Fitted Dress" class="result-image">
+                    {% else %}
+                    <p>Sorry, something went wrong. Please try again.</p>
+                    {% endif %}
+                </div>
+            </section>
+
+            <section class="feedback-section">
+                <h2>Fitting Analysis</h2>
+                <div id="feedback">
+                    {% if feedback %}
+                    <p>{{ feedback }}</p>
+                    {% else %}
+                    <p>Fitting analysis is unavailable at the moment.</p>
+                    {% endif %}
+                </div>
+            </section>
+
+            <section class="recommendation-section">
+                <h2>Recommended Dresses</h2>
+                <div id="recommendations">
+                    {% if recommendations %}
+                    <ul>
+                        {% for recommendation in recommendations %}
+                        <li>
+                            <a href="{{ recommendation.url }}" target="_blank">{{ recommendation.name }}</a>
+                            <p>{{ recommendation.description }}</p>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% else %}
+                    <p>No recommendations available.</p>
+                    {% endif %}
+                </div>
+            </section>
+
+            <div class="button-container">
+                <a href="/" class="button">Try Another Dress</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Virtual Dress Fitter. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
